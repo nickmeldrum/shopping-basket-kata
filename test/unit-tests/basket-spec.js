@@ -21,6 +21,12 @@ describe('shopping basket', function() {
             basket.add({name: 'something else', cost: 1})
             expect(basket.getTotal()).to.equal(2)
         })
+
+        it('add a quantity of 2 products and totals = twice the cost', function() {
+            basket = basketCreator()
+            basket.add({name: 'something', cost: 1}, 2)
+            expect(basket.getTotal()).to.equal(2)
+        })
     })
 
     context('defensive tests', function() {
