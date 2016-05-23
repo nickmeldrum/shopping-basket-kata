@@ -30,4 +30,8 @@ describe('shopping basket', function() {
     it('product name not a string throws exception', function() {
         expect(() => basket.add({name: 1, cost: 1})).to.throw()
     })
+
+    it('product with string name and numeric cost does not throw', function() {
+        expect(() => basket.add({name: 'name', cost: 1})).to.not.throw()
+    })
 })
