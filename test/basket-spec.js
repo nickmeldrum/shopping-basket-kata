@@ -6,4 +6,8 @@ describe('shopping basket', function() {
     it('empty basket returns a total of zero', function() {
         expect(basket.getTotal()).to.equal(0)
     })
+
+    it('add undefined throws exception', function() {
+        expect(() => basket.add()).to.throw()
+    })
 })
