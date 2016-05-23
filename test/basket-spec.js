@@ -10,4 +10,8 @@ describe('shopping basket', function() {
     it('add undefined throws exception', function() {
         expect(() => basket.add()).to.throw()
     })
+
+    it('add null throws exception', function() {
+        expect(() => basket.add(null)).to.throw()
+    })
 })
