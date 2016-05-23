@@ -1,6 +1,6 @@
 const chai = require('chai')
 const expect = chai.expect
-const basketCreator = require('../lib/basket')
+const basketCreator = require('../../lib/basket')
 
 describe('shopping basket', function() {
     context('totals', function() {
