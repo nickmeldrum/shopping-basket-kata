@@ -12,4 +12,9 @@ describe('products', function() {
         const product = lookup('butter')
         expect(product.cost).to.equal(0.80)
     })
+
+    it('looks up milk by name and gets product that costs £1.15', function() {
+        const product = lookup('milk')
+        expect(product.cost).to.equal(1.15)
+    })
 })
