@@ -18,4 +18,8 @@ describe('shopping basket', function() {
     it('item without cost throws exception', function() {
         expect(() => basket.add({})).to.throw()
     })
+
+    it('cost not a number throws exception', function() {
+        expect(() => basket.add({cost: 'a string'})).to.throw()
+    })
 })
