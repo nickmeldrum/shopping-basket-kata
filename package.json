@@ -1,0 +1,16 @@
+{
+  "name": "shopping-basket",
+  "version": "0.0.1",
+  "description": "shopping basket kata in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/mocha -G",
+    "watch-tests": "node ./node_modules/.bin/mocha -w -G"
+  },
+  "author": "Nick Meldrum",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.1"
+  }
+}
