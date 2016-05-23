@@ -7,6 +7,11 @@ describe('shopping basket', function() {
         it('empty basket returns a total of zero', function() {
             expect(basket.getTotal()).to.equal(0)
         })
+
+        it('basket with product with cost of 1 totals 1', function() {
+            basket.add({name: 'something', cost: 1})
+            expect(basket.getTotal()).to.equal(1)
+        })
     })
 
     context('defensive tests', function() {
