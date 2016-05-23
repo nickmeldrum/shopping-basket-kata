@@ -17,4 +17,9 @@ describe('products', function() {
         const product = lookup('milk')
         expect(product.cost).to.equal(1.15)
     })
+
+    it('looks up Milk with uppercase and gets milk product', function() {
+        const product = lookup('Milk')
+        expect(product.cost).to.equal(1.15)
+    })
 })
