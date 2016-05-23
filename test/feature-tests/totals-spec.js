@@ -14,4 +14,9 @@ describe('Feature: Calculate totals', function() {
             expect(basket.getTotal()).to.equal(2.95)
         })
     })
+
+    describe('Given the basket has 2 butter and 2 bread when I total the basket', function() {
+        it.skip('then the total should be £3.10', function() {
+        })
+    })
 })
