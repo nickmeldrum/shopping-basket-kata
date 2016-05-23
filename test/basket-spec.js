@@ -15,7 +15,7 @@ describe('shopping basket', function() {
         expect(() => basket.add(null)).to.throw()
     })
 
-    it('item without cost throws exception', function() {
+    it('product without cost throws exception', function() {
         expect(() => basket.add({})).to.throw()
     })
 
