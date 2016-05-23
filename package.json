@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node ./node_modules/.bin/mocha -G",
-    "watch-tests": "node ./node_modules/.bin/mocha -w -G"
+    "watch-tests": "node ./node_modules/.bin/mocha -G -w ./test ./lib"
   },
   "author": "Nick Meldrum",
   "license": "MIT",
