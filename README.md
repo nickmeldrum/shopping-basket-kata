@@ -21,9 +21,7 @@ Scenarios:
  * Given the basket has 2 butter and 2 bread when I total the basket then the total should be £3.10
  * Given the basket has 4 milk when I total the basket then the total should be £3.45
  * Given the basket has 2 butter, 1 bread and 8 milk when I total the basket then the total should be £9.00
- 
-The solution should be in C#.
- 
+
 ## Pointers:
 
 While we are looking for a solution that shows a good understanding of the SOLID principles, object oriented programming (or functional) and that displays a working knowledge of TDD (a git repository will be appreciated!), please keep things simple- do not over-engineer anything, make sure your code is manageable and easy to follow.
