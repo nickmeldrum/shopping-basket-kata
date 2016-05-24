@@ -2,11 +2,11 @@
 
 const chai = require('chai')
 const expect = chai.expect
-const basketCreator = require('../../lib/basket')
+const basketFactory = require('../../lib/basket')
 
 describe('discounts', function() {
     it('apply a simple discount of 50% off milk to a basket of 1 milk and totals = half the milk cost', function() {
-        const basket = basketCreator()
+        const basket = basketFactory()
         const discounts = [
             {
                 requirement: {
@@ -23,7 +23,7 @@ describe('discounts', function() {
     })
 
     it('apply 2 discounts, 50% off milk and 50% off bread and total is half off', function() {
-        const basket = basketCreator()
+        const basket = basketFactory()
         const discounts = [
             {
                 requirement: {
@@ -50,7 +50,7 @@ describe('discounts', function() {
     })
 
     it('require bread to be in basket to get 50% off all milk', function() {
-        const basket = basketCreator()
+        const basket = basketFactory()
         const discounts = [
             {
                 requirement: {
@@ -68,7 +68,7 @@ describe('discounts', function() {
     })
 
     it('require bread to be in basket to get 50% off 1 milk', function() {
-        const basket = basketCreator()
+        const basket = basketFactory()
         const discounts = [
             {
                 requirement: {
@@ -88,7 +88,7 @@ describe('discounts', function() {
     })
 
     it('require bread to be in basket to get 50% off 2 milks', function() {
-        const basket = basketCreator()
+        const basket = basketFactory()
         const discounts = [
             {
                 requirement: {
@@ -109,7 +109,7 @@ describe('discounts', function() {
     })
 
     it('require bread to be in basket to get 50% off 2 milks when bread added first', function() {
-        const basket = basketCreator()
+        const basket = basketFactory()
         const discounts = [
             {
                 requirement: {
@@ -130,7 +130,7 @@ describe('discounts', function() {
     })
 
     it('require 2 bread, but only 1 bread in basket discount not applied', function() {
-        const basket = basketCreator()
+        const basket = basketFactory()
         const discounts = [
             {
                 requirement: {
@@ -150,7 +150,7 @@ describe('discounts', function() {
     })
 
     it('require 2 bread, and 2 bread in basket discount is applied', function() {
-        const basket = basketCreator()
+        const basket = basketFactory()
         const discounts = [
             {
                 requirement: {
