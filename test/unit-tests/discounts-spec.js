@@ -1,3 +1,5 @@
+'use strict'
+
 const chai = require('chai')
 const expect = chai.expect
 const basketCreator = require('../../lib/basket')
@@ -5,7 +7,7 @@ const basketCreator = require('../../lib/basket')
 describe('shopping basket', function() {
     context('discounts', function() {
         it('apply a simple discount of 50% off milk to a basket of 1 milk and totals = half the milk cost', function() {
-            basket = basketCreator([
+            const basket = basketCreator([
                 {
                     requirement: {
                         name: 'milk'
@@ -21,7 +23,7 @@ describe('shopping basket', function() {
         })
 
         it('apply 2 discounts, 50% off milk and 50% off bread and total is half off', function() {
-            basket = basketCreator([
+            const basket = basketCreator([
                 {
                     requirement: {
                         name: 'milk'
@@ -47,7 +49,7 @@ describe('shopping basket', function() {
         })
 
         it('require bread to be in basket to get 50% off all milk', function() {
-            basket = basketCreator([
+            const basket = basketCreator([
                 {
                     requirement: {
                         name: 'bread'
@@ -64,7 +66,7 @@ describe('shopping basket', function() {
         })
 
         it('require bread to be in basket to get 50% off 1 milk', function() {
-            basket = basketCreator([
+            const basket = basketCreator([
                 {
                     requirement: {
                         name: 'bread'

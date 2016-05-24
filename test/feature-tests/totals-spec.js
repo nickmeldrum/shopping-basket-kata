@@ -1,3 +1,5 @@
+'use strict'
+
 const basketCreator = require('../../lib/basket')
 const productLookup = require('../../lib/product')
 const chai = require('chai')
