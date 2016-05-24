@@ -142,5 +142,25 @@ describe('shopping basket', function() {
             basket.add({name: 'milk', cost: 1})
             expect(basket.getTotal()).to.equal(1.1)
         })
+
+        it('require 2 bread, and 2 bread in basket discount is applied', function() {
+            const basket = basketCreator([
+                {
+                    requirement: {
+                        name: 'bread',
+                        number: 2
+                    },
+                    product: {
+                        name: 'milk',
+                        discount: 0.5,
+                        number: 1
+                    }
+                }
+            ])
+            basket.add({name: 'bread', cost: 0.1})
+            basket.add({name: 'milk', cost: 1})
+            basket.add({name: 'bread', cost: 0.1})
+            expect(basket.getTotal()).to.equal(0.7)
+        })
     })
 })
