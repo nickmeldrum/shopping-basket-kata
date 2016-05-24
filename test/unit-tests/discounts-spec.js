@@ -62,5 +62,24 @@ describe('shopping basket', function() {
             basket.add({name: 'bread', cost: 1.2})
             expect(basket.getTotal()).to.equal(2.0)
         })
+
+        it('require bread to be in basket to get 50% off 1 milk', function() {
+            basket = basketCreator([
+                {
+                    requirement: {
+                        name: 'bread'
+                    },
+                    product: {
+                        name: 'milk',
+                        discount: 0.5,
+                        number: 1
+                    }
+                }
+            ])
+            basket.add({name: 'milk', cost: 1.6})
+            basket.add({name: 'milk', cost: 1.6})
+            basket.add({name: 'bread', cost: 1.2})
+            expect(basket.getTotal()).to.equal(3.6)
+        })
     })
 })
