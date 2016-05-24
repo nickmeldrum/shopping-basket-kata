@@ -28,4 +28,13 @@ describe('Feature: Calculate totals', function() {
             expect(basket.getTotal(discountLookup)).to.equal(3.10)
         })
     })
+
+    describe('Given the basket has 4 milk when I total the basket', function() {
+        it('then the total should be £3.45', function() {
+            const basket = basketCreator()
+            basket.add(productLookup('milk'), 4)
+            
+            expect(basket.getTotal(discountLookup)).to.equal(3.45)
+        })
+    })
 })
