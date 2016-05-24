@@ -4,8 +4,8 @@
   "description": "shopping basket kata in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/.bin/mocha -G",
-    "watch-tests": "node ./node_modules/.bin/mocha -G -w ./test/** ./lib"
+    "test": "node ./node_modules/mocha/bin/mocha -G",
+    "watch-tests": "node ./node_modules/mocha/bin/mocha -G -w ./lib"
   },
   "author": "Nick Meldrum",
   "license": "MIT",
