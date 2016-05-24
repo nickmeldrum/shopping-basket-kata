@@ -21,11 +21,11 @@ describe('Feature: Calculate totals', function() {
 
     describe('Given the basket has 2 butter and 2 bread when I total the basket', function() {
         it('then the total should be £3.10', function() {
-            const basket = basketCreator(discountLookup)
+            const basket = basketCreator()
             basket.add(productLookup('bread'), 2)
             basket.add(productLookup('butter'), 2)
             
-            expect(basket.getTotal()).to.equal(3.10)
+            expect(basket.getTotal(discountLookup)).to.equal(3.10)
         })
     })
 })
